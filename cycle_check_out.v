@@ -47,9 +47,9 @@ reg [31:0] CHXX_NUM;
 always@(posedge clk or negedge rst_n)
     if(~rst_n)
         CHXX_NUM <= 0;
-    else if(state==S1out)
+    else if(state == S1out)
         CHXX_NUM <= 1;
-    else if(state==S2out)
+    else if(state == S2out)
         CHXX_NUM <= 2;
     else if(state==S3out)
         CHXX_NUM <= 3;
@@ -79,7 +79,7 @@ always@(posedge clk or negedge rst_n)
         begin
             cnt_work <= 0;
             data_valid <= 0;
-            state <=S1check;
+            state <= S1check;
         end
     S1check:
         begin
